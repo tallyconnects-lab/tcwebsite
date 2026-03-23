@@ -1,12 +1,15 @@
+import Image from "next/image";
+
 interface FeatureCardProps {
   icon: string;
   title: string;
   description: string;
   bullets: string[];
   reversed?: boolean;
+  image?: string;
 }
 
-export default function FeatureCard({ icon, title, description, bullets, reversed = false }: FeatureCardProps) {
+export default function FeatureCard({ icon, title, description, bullets, reversed = false, image }: FeatureCardProps) {
   return (
     <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 lg:gap-16`}>
       <div className="flex-1">
@@ -25,9 +28,19 @@ export default function FeatureCard({ icon, title, description, bullets, reverse
         </ul>
       </div>
       <div className="flex-1 w-full max-w-md lg:max-w-none">
-        <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex items-center justify-center">
-          <span className="text-7xl">{icon}</span>
-        </div>
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            width={600}
+            height={400}
+            className="rounded-2xl border border-primary/10 w-full h-auto"
+          />
+        ) : (
+          <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex items-center justify-center">
+            <span className="text-7xl">{icon}</span>
+          </div>
+        )}
       </div>
     </div>
   );

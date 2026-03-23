@@ -20,6 +20,7 @@ const features = [
       "Auto-maps columns from any format",
       "GST-compliant with tax breakup",
     ],
+    image: "/images/voucherimport.png",
   },
   {
     icon: "🏦",
@@ -32,6 +33,7 @@ const features = [
       "Auto-creates receipts and payments",
       "Reconciliation-ready posting",
     ],
+    image: "/images/Bankpdf totallyimport.png",
   },
   {
     icon: "📋",
@@ -56,6 +58,7 @@ const features = [
       "Ledger name fuzzy matching",
       "Color-coded error reporting",
     ],
+    image: "/images/Aivalidationprocess.png",
   },
 ];
 
@@ -86,6 +89,7 @@ export default function HomePage() {
                 description={feature.description}
                 bullets={feature.bullets}
                 reversed={i % 2 === 1}
+                image={feature.image}
               />
             ))}
           </div>
