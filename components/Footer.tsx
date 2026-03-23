@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Product: [
@@ -76,11 +77,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-primary rounded flex items-center justify-center">
-              <span className="text-white font-bold text-xs">TC</span>
-            </div>
-            <span className="font-semibold text-white">TallyConnects</span>
+          <div className="flex items-center">
+            <Image
+              src="/images/tclogo.png"
+              alt="TallyConnects"
+              width={150}
+              height={40}
+              className="h-8 w-auto"
+            />
           </div>
           <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} TallyConnects. All rights reserved.

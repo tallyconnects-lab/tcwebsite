@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/features", label: "Features" },
@@ -18,13 +19,15 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">TC</span>
-            </div>
-            <span className="font-bold text-xl text-gray-900">
-              Tally<span className="text-primary">Connects</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/tclogo.png"
+              alt="TallyConnects"
+              width={180}
+              height={48}
+              style={{ height: "48px", width: "auto" }}
+              priority
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-6">
