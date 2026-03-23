@@ -1,0 +1,101 @@
+import Hero from "@/components/Hero";
+import PainPoints from "@/components/PainPoints";
+import FeatureCard from "@/components/FeatureCard";
+import HowItWorks from "@/components/HowItWorks";
+import PricingTable from "@/components/PricingTable";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import ComparisonTable from "@/components/ComparisonTable";
+import { SoftwareApplicationJsonLd, HowToJsonLd } from "@/components/JsonLd";
+
+const features = [
+  {
+    icon: "📄",
+    title: "Voucher Posting",
+    description:
+      "Import sales, purchase, receipt, payment, journal, and contra vouchers from Excel to Tally in one click.",
+    bullets: [
+      "All voucher types supported",
+      "Multi-line and complex vouchers",
+      "Auto-maps columns from any format",
+      "GST-compliant with tax breakup",
+    ],
+  },
+  {
+    icon: "🏦",
+    title: "Bank Statement Import",
+    description:
+      "Import bank statements directly into Tally. Smart narration matching auto-identifies parties and ledgers.",
+    bullets: [
+      "Supports all major bank formats",
+      "AI narration matching",
+      "Auto-creates receipts and payments",
+      "Reconciliation-ready posting",
+    ],
+  },
+  {
+    icon: "📋",
+    title: "Master Import",
+    description:
+      "Bulk create ledgers, stock items, cost centres, and other masters from Excel spreadsheets.",
+    bullets: [
+      "Ledger, stock item, and group creation",
+      "GST details auto-filled",
+      "Opening balance support",
+      "Handles 1000+ masters at once",
+    ],
+  },
+  {
+    icon: "🤖",
+    title: "AI Validation",
+    description:
+      "Catch errors before they reach Tally. AI validates GSTIN, dates, amounts, and ledger names automatically.",
+    bullets: [
+      "GSTIN format and existence check",
+      "Date and amount validation",
+      "Ledger name fuzzy matching",
+      "Color-coded error reporting",
+    ],
+  },
+];
+
+export default function HomePage() {
+  return (
+    <>
+      <SoftwareApplicationJsonLd />
+      <HowToJsonLd />
+
+      <Hero />
+      <ComparisonTable />
+
+      <section className="py-20 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-dark">
+            Everything You Need to Automate Tally
+          </h2>
+          <p className="mt-4 text-center text-gray-500 text-lg max-w-2xl mx-auto">
+            From voucher posting to AI validation, TallyConnects handles it all.
+          </p>
+
+          <div className="mt-16 space-y-20">
+            {features.map((feature, i) => (
+              <FeatureCard
+                key={i}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                bullets={feature.bullets}
+                reversed={i % 2 === 1}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <HowItWorks />
+      <PricingTable />
+      <Testimonials />
+      <FAQ />
+    </>
+  );
+}
