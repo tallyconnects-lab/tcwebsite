@@ -35,15 +35,15 @@ const features = [
     image: "/images/bankpdftotally.png",
   },
   {
-    icon: "📂",
-    title: "Master Import",
+    icon: "📑",
+    title: "Multi Voucher Mode Import",
     description:
-      "Bulk create ledgers, stock items, cost centres, and other masters from Excel spreadsheets.",
+      "Import complex multi-ledger vouchers with inventory, cost centres, and bill references in one go.",
     bullets: [
-      "Ledger, stock item, and group creation",
-      "GST details auto-filled",
-      "Opening balance support",
-      "Handles 1000+ masters at once",
+      "Import Multiple debit credit ledgers",
+      "Smart tagging system to add N number of bill references",
+      "Add multiple Cost Center at any ledger",
+      "Import Multiple Dr Cr ledger with inventory",
     ],
   },
   {
