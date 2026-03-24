@@ -17,8 +17,6 @@ const features = [
     bullets: [
       "All voucher types supported",
       "Multiline invoice Smart Merging",
-      "Smart Excel Auto-Mapping",
-      "Master Validation within Excel",
       "Auto create Ledger with GSTN",
       "Stockitem with GST Rate & HSN",
     ],
@@ -34,7 +32,7 @@ const features = [
       "AP Party Ledger Detection from Narration Match with Tally",
       "Auto Creates Receipt Payment & Contra voucher types",
     ],
-    image: "/images/Bankpdf totallyimport.png",
+    image: "/images/bankpdftotally.png",
   },
   {
     icon: "📋",
