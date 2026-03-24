@@ -11,14 +11,16 @@ import { SoftwareApplicationJsonLd, HowToJsonLd } from "@/components/JsonLd";
 const features = [
   {
     icon: "📄",
-    title: "Voucher Posting",
+    title: "Voucher Imports",
     description:
       "Import sales, purchase, receipt, payment, journal, and contra vouchers from Excel to Tally in one click.",
     bullets: [
       "All voucher types supported",
-      "Multi-line and complex vouchers",
-      "Auto-maps columns from any format",
-      "GST-compliant with tax breakup",
+      "Multiline invoice Smart Merging",
+      "Smart Excel Auto-Mapping",
+      "Master Validation within Excel",
+      "Auto create Ledger with GSTN",
+      "Stockitem with GST Rate & HSN",
     ],
     image: "/images/voucherimport.png",
   },
@@ -28,10 +30,9 @@ const features = [
     description:
       "Import bank statements directly into Tally. Smart narration matching auto-identifies parties and ledgers.",
     bullets: [
-      "Supports all major bank formats",
-      "AI narration matching",
-      "Auto-creates receipts and payments",
-      "Reconciliation-ready posting",
+      "Supports nationalized as well as cooperative bank",
+      "AP Party Ledger Detection from Narration Match with Tally",
+      "Auto Creates Receipt Payment & Contra voucher types",
     ],
     image: "/images/Bankpdf totallyimport.png",
   },
