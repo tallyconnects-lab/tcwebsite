@@ -96,7 +96,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <HowItWorks />
       <PricingTable />
       <Testimonials />
       <FAQ />
