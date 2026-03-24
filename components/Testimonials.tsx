@@ -46,11 +46,6 @@ const testimonials = [
     name: "Sampat Kumar",
     role: "Business User",
   },
-  {
-    quote: "I was searching utility from 1 year, I used other monthly subscription also but then I realise what is difference. Very good support... they solve my issue within time and they all have good knowledge of software. Happy user.",
-    name: "Anil Ahuja",
-    role: "Business User",
-  },
 ];
 
 function StarRating() {
@@ -107,9 +102,9 @@ export default function Testimonials() {
             href="https://www.google.com/maps?cid=10038447292421933675"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
-            View all reviews on Google →
+            View More Reviews
           </Link>
         </div>
       </div>
