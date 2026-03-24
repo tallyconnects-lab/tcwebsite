@@ -1,20 +1,69 @@
+import Link from "next/link";
+
 const testimonials = [
   {
-    quote: "TallyConnects saved us 6 hours every day. We process 500+ invoices daily and it just works.",
-    name: "Rajesh M.",
-    role: "CA Firm",
+    quote: "An absolute game-changer for our accounting team! The software makes importing Excel data into Tally so easy and accurate. We used to spend hours manually entering data, but now it's done in minutes. Highly recommend it to any business using Tally.",
+    name: "Rikka Varshini",
+    role: "Business User",
   },
   {
-    quote: "Bank statement import is a game-changer. What took 2 hours now takes 5 minutes.",
-    name: "Priya S.",
-    role: "Accountant",
+    quote: "This software is incredible! Importing data from Excel to Tally has never been this easy. The process is fast and error-free, saving me hours of manual work. It's a must-have for any business using Tally.",
+    name: "Gothal & Co.",
+    role: "Chartered Accountants",
   },
   {
-    quote: "The AI validation catches errors before they reach Tally. Our data accuracy is now 99.9%.",
-    name: "Vikram T.",
-    role: "Business Owner",
+    quote: "I am used bank templates only for last two years. It is old school but easy to use and understand well. Just recommendation update your template wise video in high resolution.",
+    name: "Gaurav R Patel",
+    role: "Local Guide",
+  },
+  {
+    quote: "Offers a comprehensive set of features that streamline our workflow. From task management to data entry, it covers all our book-keeping needs efficiently. The customer support team is top-notch.",
+    name: "GST Adda",
+    role: "Tax Consultants",
+  },
+  {
+    quote: "I have got the software designed in 2018 and after which there has been no looking back. I have access to all updates and we are really happy with excel to tally and their team. Definitely worth trying.",
+    name: "Kadavakollu Associates",
+    role: "Business Firm",
+  },
+  {
+    quote: "I can't believe how much time we've saved since using this software! The integration with Tally is perfect, and I'm impressed by how well it handles large Excel files. A must-have for anyone looking to streamline their financial data imports!",
+    name: "Parthipan Nagarajan",
+    role: "Business User",
+  },
+  {
+    quote: "My data gets imported in seconds. The team provides best support. No regrets about purchasing excel-tally software. Very time saving and most recommended software for all the CA's and Accountant out there.",
+    name: "Chand Asopa",
+    role: "Chartered Accountant",
+  },
+  {
+    quote: "Totally amazing experience! They have really smooth software with 100% customer satisfaction. I live in Dubai (UAE) and the cost-output benefit ratio is immense. This is 100% worth service/software.",
+    name: "Nikeeta Bahar",
+    role: "Dubai, UAE",
+  },
+  {
+    quote: "Excel-Tally is a powerful tool designed to simplify the process of data import into Tally. With its user-friendly interface and robust functionality, it makes importing data a breeze, saving users valuable time and effort.",
+    name: "Sampat Kumar",
+    role: "Business User",
+  },
+  {
+    quote: "I was searching utility from 1 year, I used other monthly subscription also but then I realise what is difference. Very good support... they solve my issue within time and they all have good knowledge of software. Happy user.",
+    name: "Anil Ahuja",
+    role: "Business User",
   },
 ];
+
+function StarRating() {
+  return (
+    <div className="flex gap-0.5">
+      {[...Array(5)].map((_, i) => (
+        <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   return (
@@ -23,15 +72,24 @@ export default function Testimonials() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-dark">
           Trusted by Accountants &amp; Businesses
         </h2>
+        <p className="mt-3 text-center text-gray-500 text-lg">
+          See what our users say on{" "}
+          <Link
+            href="https://www.google.com/maps?cid=10038447292421933675"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-semibold"
+          >
+            Google Reviews
+          </Link>
+        </p>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
-              <svg className="h-8 w-8 text-primary/30" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
-              </svg>
-              <p className="mt-4 text-gray-700 leading-relaxed">{t.quote}</p>
-              <div className="mt-6 flex items-center gap-3">
+            <div key={i} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100 flex flex-col">
+              <StarRating />
+              <p className="mt-3 text-gray-700 leading-relaxed text-sm flex-1">&ldquo;{t.quote}&rdquo;</p>
+              <div className="mt-5 flex items-center gap-3">
                 <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
                   {t.name[0]}
                 </div>
@@ -42,6 +100,17 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="https://www.google.com/maps?cid=10038447292421933675"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+          >
+            View all reviews on Google →
+          </Link>
         </div>
       </div>
     </section>
