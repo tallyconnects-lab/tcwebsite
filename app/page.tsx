@@ -10,7 +10,7 @@ import { SoftwareApplicationJsonLd, HowToJsonLd } from "@/components/JsonLd";
 
 const features = [
   {
-    icon: "📄",
+    icon: "🧾",
     title: "Voucher Imports",
     description:
       "Import sales, purchase, receipt, payment, journal, and contra vouchers from Excel to Tally in one click.",
@@ -35,7 +35,7 @@ const features = [
     image: "/images/bankpdftotally.png",
   },
   {
-    icon: "📋",
+    icon: "📂",
     title: "Master Import",
     description:
       "Bulk create ledgers, stock items, cost centres, and other masters from Excel spreadsheets.",

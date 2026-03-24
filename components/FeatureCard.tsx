@@ -13,8 +13,9 @@ export default function FeatureCard({ icon, title, description, bullets, reverse
   return (
     <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 lg:gap-16`}>
       <div className="flex-1">
-        <div className="text-5xl mb-4">{icon}</div>
-        <h3 className="text-2xl sm:text-3xl font-bold text-dark">{title}</h3>
+        <h3 className="text-2xl sm:text-3xl font-bold text-dark flex items-center gap-3">
+          <span className="text-4xl">{icon}</span> {title}
+        </h3>
         <p className="mt-3 text-gray-600 text-lg leading-relaxed">{description}</p>
         <ul className="mt-5 space-y-2">
           {bullets.map((bullet, i) => (
