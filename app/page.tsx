@@ -45,6 +45,7 @@ const features = [
       "Add multiple Cost Center at any ledger",
       "Import Multiple Dr Cr ledger with inventory",
     ],
+    image: "/images/multivoucherimport.png",
   },
   {
     icon: "🤖",
