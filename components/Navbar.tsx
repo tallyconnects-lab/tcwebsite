@@ -25,6 +25,7 @@ export default function Navbar() {
               alt="TallyConnects"
               width={180}
               height={48}
+              className="border border-gray-200 rounded-lg p-1"
               style={{ height: "60px", width: "auto", color: "transparent" }}
               priority
             />

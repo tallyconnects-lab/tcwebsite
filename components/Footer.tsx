@@ -83,6 +83,7 @@ export default function Footer() {
               alt="TallyConnects"
               width={180}
               height={60}
+              className="border border-gray-200 rounded-lg p-1"
               style={{ height: "60px", width: "auto", color: "transparent" }}
             />
           </div>
