@@ -4,36 +4,36 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Does TallyConnects work with Tally ERP 9?",
-    a: "Yes, TallyConnects works with both Tally ERP 9 and TallyPrime.",
+    q: "How do I get started with TallyConnects?",
+    a: "Simply install the TallyConnects Excel Add-in, register your account, and login using your email and API Key. The add-in appears as a ribbon tab in Excel — you can start importing data to Tally right away.",
   },
   {
-    q: "Do I need an internet connection?",
-    a: "Yes, an internet connection is required for login, validation, and template conversion. The Tally connection itself is local.",
+    q: "Which Tally versions does TallyConnects support?",
+    a: "TallyConnects works seamlessly with Tally ERP 9, TallyPrime, and TallyPrime 5.1 — all versions are fully supported.",
   },
   {
-    q: "Is my data safe?",
-    a: "Data is processed securely via encrypted APIs. We don't store your Tally data on our servers.",
+    q: "What types of vouchers can I import?",
+    a: "You can import Sales, Purchase, Receipt, Payment, Journal, Contra, Multi Dr/Cr, and Multi Dr/Cr with Inventory vouchers. It also supports Ledger Masters, Stock Items, Bank Statements, and E-Invoices.",
   },
   {
-    q: "Can I use it on multiple computers?",
-    a: "Yes, simply login with your account on any computer.",
+    q: "How does the token pricing work?",
+    a: "Tokens are pay-per-use: Excel to Tally posting costs 0.10 token per record, PDF to Tally costs 0.25 token per record, and AI Validation costs 0.50 token per run. Purchased tokens never expire.",
   },
   {
-    q: "What Excel versions are supported?",
-    a: "Microsoft Excel 2016, 2019, 2021, and Microsoft 365 (Windows only).",
+    q: "Can TallyConnects auto-create ledgers and stock items?",
+    a: "Yes! TallyConnects can auto-create Ledgers with GSTN, Stock Items with GST Rate & HSN, GST Ledgers (CGST, SGST, IGST), Units of Measure, and Stock Groups — all directly in Tally.",
   },
   {
-    q: "Do tokens expire?",
-    a: "No, purchased tokens never expire.",
+    q: "How many bank statement formats are supported?",
+    a: "TallyConnects supports 163+ bank statement templates including SBI, HDFC, ICICI, Axis, Kotak, PNB, and all major nationalized, private, and cooperative banks. New templates are added regularly.",
   },
   {
-    q: "What if a ledger doesn't exist in Tally?",
-    a: "TallyConnects highlights unmatched ledgers and can auto-create them for you.",
+    q: "Can I use TallyConnects on multiple computers?",
+    a: "Yes, simply login with your account on any computer. Sessions are cached for 24 hours, so you don't need to re-login after restarting Excel.",
   },
   {
-    q: "How is this different from Tally's built-in Excel import?",
-    a: "TallyConnects offers smart column mapping, AI validation, bank narration matching, e-invoice support, and handles complex multi-line vouchers — features not available in Tally's built-in import.",
+    q: "What makes TallyConnects different from other Excel to Tally tools?",
+    a: "TallyConnects offers smart auto-column mapping, AI-powered validation, bank narration matching, multi-voucher mode with inventory, e-invoice support, and handles complex multi-line vouchers — features not available in other tools.",
   },
 ];
 
