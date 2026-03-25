@@ -81,9 +81,9 @@ export default function Footer() {
             <Image
               src="/images/TCSlogonew.png"
               alt="TallyConnects"
-              width={150}
-              height={40}
-              className="h-8 w-auto"
+              width={180}
+              height={60}
+              style={{ height: "60px", width: "auto", color: "transparent" }}
             />
           </div>
           <p className="text-sm text-gray-500">
