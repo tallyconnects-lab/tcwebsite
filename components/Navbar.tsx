@@ -21,11 +21,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/TCSlogo.png"
+              src="/images/TCSlogonew.png"
               alt="TallyConnects"
               width={180}
               height={48}
-              style={{ height: "48px", width: "auto" }}
+              style={{ height: "60px", width: "auto", color: "transparent" }}
               priority
             />
           </Link>
