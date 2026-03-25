@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center">
             <Image
-              src="/images/TCSlogo.png"
+              src="/images/newlogo.png"
               alt="TallyConnects"
               width={150}
               height={40}

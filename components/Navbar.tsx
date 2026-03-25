@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/TCSlogo.png"
+              src="/images/newlogo.png"
               alt="TallyConnects"
               width={180}
               height={48}

@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Which Tally versions does TallyConnects support?",
-    a: "TallyConnects works seamlessly with Tally ERP 9, TallyPrime, and TallyPrime 5.1 — all versions are fully supported.",
+    a: "TallyConnects works seamlessly with TallyPrime 5.1 onwards — all versions are fully supported.",
   },
   {
     q: "What types of vouchers can I import?",
