@@ -34,12 +34,12 @@ export default function Hero() {
         </p>
 
         {/* Banner Image */}
-        <div className="mt-8 mx-auto max-w-5xl">
+        <div className="mt-8 mx-auto max-w-3xl">
           <Image
-            src="/images/banner2.png"
+            src="/images/banner3.png"
             alt="TallyConnects Features - Excel to Tally Import"
-            width={1200}
-            height={400}
+            width={720}
+            height={240}
             className="w-full h-auto rounded-2xl"
             priority
           />
