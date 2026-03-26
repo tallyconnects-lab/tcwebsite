@@ -36,7 +36,7 @@ export default function Hero() {
         {/* Banner Image */}
         <div className="mt-8 mx-auto max-w-3xl">
           <Image
-            src="/images/banner3.png"
+            src="/images/banner2.png"
             alt="TallyConnects Features - Excel to Tally Import"
             width={720}
             height={240}
