@@ -34,7 +34,7 @@ export default function Hero() {
         </p>
 
         {/* Banner Image */}
-        <div className="mt-8 mx-auto max-w-3xl">
+        <div className="mt-8 mx-auto max-w-2xl">
           <Image
             src="/images/banner2.png"
             alt="TallyConnects Features - Excel to Tally Import"
