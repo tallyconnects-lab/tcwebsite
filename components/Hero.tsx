@@ -33,28 +33,16 @@ export default function Hero() {
           AI Validation that automatically detects, corrects, and imports your data for error-free.
         </p>
 
-        {/* Feature highlights */}
-        <div className="mt-8 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-5 gap-4">
-          <div className="flex flex-col items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-sm px-4 py-4">
-            <Image src="/images/aivalidation.png" alt="AI Validation" width={40} height={40} />
-            <span className="text-sm sm:text-base font-bold text-gray-800 text-center">AI Validation Error-Free Import</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-sm px-4 py-4">
-            <Image src="/images/mapping.png" alt="Smart Auto-Mapping" width={40} height={40} />
-            <span className="text-sm sm:text-base font-bold text-gray-800">Smart Auto-Mapping</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-sm px-4 py-4">
-            <Image src="/images/importtally.png" alt="PDF to Tally Import" width={40} height={40} />
-            <span className="text-sm sm:text-base font-bold text-gray-800">PDF to Tally Import</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-sm px-4 py-4">
-            <Image src="/images/exceltotally.png" alt="Easy to Use Excel-Based Software" width={40} height={40} />
-            <span className="text-sm sm:text-base font-bold text-gray-800 text-center">Easy to Use Excel-Based</span>
-          </div>
-          <div className="flex flex-col items-center gap-2 rounded-xl bg-white border border-gray-100 shadow-sm px-4 py-4">
-            <Image src="/images/tokenbalance.png" alt="Prepaid Pay-as-You-Use" width={40} height={40} />
-            <span className="text-sm sm:text-base font-bold text-gray-800 text-center">Prepaid Pay-as-You-Use</span>
-          </div>
+        {/* Banner Image */}
+        <div className="mt-8 mx-auto max-w-5xl">
+          <Image
+            src="/images/banner2.png"
+            alt="TallyConnects Features - Excel to Tally Import"
+            width={1200}
+            height={400}
+            className="w-full h-auto rounded-2xl"
+            priority
+          />
         </div>
 
         {/* CTA Buttons */}
