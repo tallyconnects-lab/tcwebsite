@@ -91,7 +91,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} TallyConnects. All rights reserved.
           </p>
           <div className="text-sm text-gray-500">
-            support@xltotally.com
+            support@tallyconnects.in
           </div>
         </div>
       </div>

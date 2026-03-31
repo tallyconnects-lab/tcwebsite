@@ -18,7 +18,7 @@ export default function RegisterPage() {
 
         <div className="rounded-2xl border-2 border-primary/20 bg-white shadow-lg shadow-primary/5 overflow-hidden">
           <iframe
-            src="https://xltotally.com/authentication/register?iframe=1"
+            src="https://tallyconnects.in/authentication/register?iframe=1"
             title="TallyConnects Registration"
             className="w-full border-0"
             style={{ height: "700px" }}

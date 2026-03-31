@@ -28,8 +28,8 @@ export default function ContactPage() {
                   </svg>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <a href="mailto:support@xltotally.com" className="text-primary hover:underline">
-                      support@xltotally.com
+                    <a href="mailto:support@tallyconnects.in" className="text-primary hover:underline">
+                      support@tallyconnects.in
                     </a>
                   </div>
                 </div>
