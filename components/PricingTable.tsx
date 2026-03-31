@@ -4,7 +4,7 @@ const plans = [
   { name: "Starter", tokens: "50,000", price: "5,000", desc: "Try it out" },
   { name: "Professional", tokens: "1,20,000", price: "10,000", desc: "Small businesses", popular: true },
   { name: "Business", tokens: "2,00,000", price: "15,000", desc: "Growing companies" },
-  { name: "Enterprise", tokens: "5,00,000", price: "25,000", desc: "High volume" },
+  { name: "Enterprise", tokens: "5,00,000+", price: null, desc: "High volume", contact: true },
 ];
 
 const consumption = [
@@ -40,18 +40,22 @@ export default function PricingTable() {
               <h3 className="text-lg font-bold text-dark">{plan.name}</h3>
               <p className="mt-1 text-sm text-gray-500">{plan.desc}</p>
               <div className="mt-6">
-                <span className="text-4xl font-extrabold text-dark">Rs {plan.price}</span>
+                {plan.price ? (
+                  <span className="text-4xl font-extrabold text-dark">Rs {plan.price}</span>
+                ) : (
+                  <span className="text-3xl font-extrabold text-dark">Contact for Pricing</span>
+                )}
               </div>
               <p className="mt-2 text-lg font-bold text-primary">{plan.tokens} Tokens</p>
               <Link
-                href="/pricing"
+                href={plan.contact ? "/contact" : "/pricing"}
                 className={`mt-6 block w-full rounded-lg py-3 text-sm font-semibold transition-colors ${
                   plan.popular
                     ? "bg-primary text-white hover:bg-primary-dark"
                     : "border border-primary text-primary hover:bg-primary/5"
                 }`}
               >
-                Get Started
+                {plan.contact ? "Contact Us" : "Get Started"}
               </Link>
             </div>
           ))}
