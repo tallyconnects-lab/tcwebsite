@@ -44,7 +44,7 @@ export default function PartnerPage() {
               { step: "1", title: "Sign Up", desc: "Register as a partner for free" },
               { step: "2", title: "Get Referral Code", desc: "Receive your unique referral link and code" },
               { step: "3", title: "Share", desc: "Share with your clients, network, and audience" },
-              { step: "4", title: "Earn", desc: "Earn 50% on first purchase, 10% recurring" },
+              { step: "4", title: "Earn", desc: "Earn 25% on first purchase, 10% recurring" },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-14 h-14 bg-primary text-white font-bold text-2xl rounded-full flex items-center justify-center mx-auto mb-4">
@@ -77,7 +77,7 @@ export default function PartnerPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b pb-3">
                   <span className="text-gray-700">First Purchase</span>
-                  <span className="text-2xl font-bold text-primary">50%</span>
+                  <span className="text-2xl font-bold text-primary">25%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Recurring Purchases</span>
