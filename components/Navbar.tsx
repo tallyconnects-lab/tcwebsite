@@ -6,8 +6,7 @@ import Image from "next/image";
 const navLinks = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/pdf-to-tally", label: "Pdf" },
-  { href: "/bank-statement-to-tally", label: "BankStatement" },
+  { href: "/bank-statement-to-tally", label: "BankPDF Import" },
   { href: "/excel-to-tally", label: "TallyConnects API" },
   { href: "/partner", label: "Partner" },
   { href: "/blog", label: "Blogs" },
