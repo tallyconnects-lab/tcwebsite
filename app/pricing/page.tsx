@@ -9,7 +9,6 @@ const plans = [
   { name: "Starter", tokens: "50,000", price: "5,000", perToken: "0.10" },
   { name: "Professional", tokens: "1,20,000", price: "10,000", perToken: "0.08" },
   { name: "Business", tokens: "2,00,000", price: "15,000", perToken: "0.075" },
-  { name: "Enterprise", tokens: "5,00,000", price: "25,000", perToken: "0.06" },
 ];
 
 const consumption = [
@@ -32,15 +31,15 @@ export default function PricingPage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {plans.map((plan, i) => (
               <div
                 key={i}
                 className={`rounded-xl border-2 p-6 text-center ${
-                  i === 2 ? "border-primary shadow-lg scale-105" : "border-gray-200"
+                  i === 1 ? "border-primary shadow-lg scale-105" : "border-gray-200"
                 }`}
               >
-                {i === 2 && (
+                {i === 1 && (
                   <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
                     MOST POPULAR
                   </span>

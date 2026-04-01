@@ -4,7 +4,6 @@ const plans = [
   { name: "Starter", tokens: "50,000", price: "5,000", desc: "Try it out" },
   { name: "Professional", tokens: "1,20,000", price: "10,000", desc: "Small businesses", popular: true },
   { name: "Business", tokens: "2,00,000", price: "15,000", desc: "Growing companies" },
-  { name: "Enterprise", tokens: "5,00,000+", price: null, desc: "High volume", contact: true },
 ];
 
 const consumption = [
@@ -24,7 +23,7 @@ export default function PricingTable() {
           Buy tokens. Use anytime. No subscriptions.
         </p>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map((plan) => (
             <div
               key={plan.name}
