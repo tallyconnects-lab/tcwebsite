@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Features",
+  description: "Explore TallyConnects features: Excel to Tally import, AI validation, bank statement processing, GST e-invoicing, multi-voucher mode, and more.",
 };
 
 const features = [

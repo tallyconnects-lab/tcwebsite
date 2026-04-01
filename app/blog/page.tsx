@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog",
+  description: "TallyConnects blog: tutorials, tips, and guides for Tally automation, Excel to Tally imports, bank statement processing, and GST compliance.",
 };
 
 const articles = [

@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Pricing",
+  description: "Simple pay-per-use pricing for TallyConnects. Rs 0.10 per voucher. No subscriptions, no monthly fees. Buy tokens and use anytime.",
 };
 
 const plans = [

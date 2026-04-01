@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "TallyConnects vs Quick2Tally",
+  description: "Compare TallyConnects vs Quick2Tally. Pay-per-use pricing, Excel-native workflow, AI validation, and 30+ bank formats supported.",
 };
 
 const rows = [

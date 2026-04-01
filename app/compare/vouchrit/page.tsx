@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "TallyConnects vs Vouchrit",
+  description: "Compare TallyConnects vs Vouchrit. Transparent pricing, Excel integration, e-commerce import support, and no subscription lock-in.",
 };
 
 const rows = [

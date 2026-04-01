@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "TallyConnects vs Suvit",
+  description: "Compare TallyConnects vs Suvit. Excel-native interface, pay-per-use tokens, offline Tally access, AI validation, and e-invoice support.",
 };
 
 const rows = [

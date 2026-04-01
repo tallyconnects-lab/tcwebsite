@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact Us",
+  description: "Contact TallyConnects support. Email support@tallyconnects.in for help with Excel to Tally automation, bank statement imports, and API integrations.",
 };
 
 export default function ContactPage() {

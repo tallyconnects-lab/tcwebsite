@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Partner Program",
+  description: "Join TallyConnects Partner Program. Earn 25% on first purchase, 10% recurring. Free to join for CAs, tax consultants, and Tally resellers.",
 };
 
 const whoCanJoin = [
