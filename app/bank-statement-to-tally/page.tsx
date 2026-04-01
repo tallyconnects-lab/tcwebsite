@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Bank Statement to Tally",
@@ -7,7 +8,38 @@ export const metadata: Metadata = {
     "Import bank statements to Tally in minutes. Supports HDFC, SBI, ICICI, Axis, Kotak and all major Indian banks. PDF upload, AI extraction, narration matching, and auto reconciliation.",
 };
 
-const banks = ["HDFC", "SBI", "ICICI", "Axis", "Kotak", "PNB", "Bank of Baroda", "Union Bank", "IndusInd", "Yes Bank", "IDBI", "Federal Bank"];
+const banks = [
+  { name: "HDFC", logo: "/images/banks/hdfc.png" },
+  { name: "SBI", logo: "/images/banks/sbi.png" },
+  { name: "ICICI", logo: "/images/banks/icici.png" },
+  { name: "Axis Bank", logo: "/images/banks/axis.png" },
+  { name: "Kotak", logo: "/images/banks/kotak.png" },
+  { name: "PNB", logo: "/images/banks/pnb.png" },
+  { name: "Bank of Baroda", logo: "/images/banks/bob.png" },
+  { name: "Union Bank", logo: "/images/banks/unionbank.png" },
+  { name: "IndusInd", logo: "/images/banks/indusind.png" },
+  { name: "Yes Bank", logo: "/images/banks/yesbank.png" },
+  { name: "IDBI", logo: "/images/banks/idbi.png" },
+  { name: "Federal Bank", logo: "/images/banks/federalbank.png" },
+  { name: "Canara Bank", logo: "/images/banks/canara.png" },
+  { name: "Bank of India", logo: "/images/banks/boi.png" },
+  { name: "Indian Bank", logo: "/images/banks/indianbank.png" },
+  { name: "IOB", logo: "/images/banks/iob.png" },
+  { name: "Bandhan Bank", logo: "/images/banks/bandhan.png" },
+  { name: "AU Bank", logo: "/images/banks/aubank.png" },
+  { name: "IDFC First", logo: "/images/banks/idfc.png" },
+  { name: "UCO Bank", logo: "/images/banks/uco.png" },
+  { name: "Central Bank", logo: "/images/banks/centralbank.png" },
+  { name: "Bank of Maharashtra", logo: "/images/banks/bom.png" },
+  { name: "RBL Bank", logo: "/images/banks/rbl.png" },
+  { name: "Saraswat Bank", logo: "/images/banks/saraswat.png" },
+  { name: "DBS", logo: "/images/banks/dbs.png" },
+  { name: "HSBC", logo: "/images/banks/hsbc.png" },
+  { name: "Karnataka Bank", logo: "/images/banks/karnatakabank.png" },
+  { name: "KVB", logo: "/images/banks/kvb.png" },
+  { name: "TMB", logo: "/images/banks/tmb.png" },
+  { name: "TJSB Bank", logo: "/images/banks/tjsb.png" },
+];
 
 const steps = [
   { title: "Upload Statement", desc: "Upload your bank statement PDF or paste Excel data" },
@@ -36,10 +68,11 @@ export default function BankStatementPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Supported Banks</h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
             {banks.map((bank, i) => (
-              <div key={i} className="bg-gray-50 rounded-lg p-4 text-center font-semibold text-gray-700">
-                {bank}
+              <div key={i} className="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center gap-2">
+                <Image src={bank.logo} alt={bank.name} width={32} height={32} className="w-8 h-8 object-contain" />
+                <span className="text-xs font-semibold text-gray-700 text-center">{bank.name}</span>
               </div>
             ))}
           </div>
