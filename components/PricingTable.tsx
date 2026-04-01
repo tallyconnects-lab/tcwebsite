@@ -39,22 +39,18 @@ export default function PricingTable() {
               <h3 className="text-lg font-bold text-dark">{plan.name}</h3>
               <p className="mt-1 text-sm text-gray-500">{plan.desc}</p>
               <div className="mt-6">
-                {plan.price ? (
-                  <span className="text-4xl font-extrabold text-dark">Rs {plan.price}</span>
-                ) : (
-                  <span className="text-3xl font-extrabold text-dark">Contact for Pricing</span>
-                )}
+                <span className="text-4xl font-extrabold text-dark">Rs {plan.price}</span>
               </div>
               <p className="mt-2 text-lg font-bold text-primary">{plan.tokens} Tokens</p>
               <Link
-                href={plan.contact ? "/contact" : "/pricing"}
+                href="/pricing"
                 className={`mt-6 block w-full rounded-lg py-3 text-sm font-semibold transition-colors ${
                   plan.popular
                     ? "bg-primary text-white hover:bg-primary-dark"
                     : "border border-primary text-primary hover:bg-primary/5"
                 }`}
               >
-                {plan.contact ? "Contact Us" : "Get Started"}
+                Get Started
               </Link>
             </div>
           ))}
