@@ -6,10 +6,11 @@ import Image from "next/image";
 const navLinks = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/excel-to-tally", label: "Excel to Tally" },
-  { href: "/bank-statement-to-tally", label: "Bank Statement" },
-  { href: "/partner", label: "Partner Program" },
-  { href: "/blog", label: "Blog" },
+  { href: "/pdf-to-tally", label: "Pdf" },
+  { href: "/bank-statement-to-tally", label: "BankStatement" },
+  { href: "/excel-to-tally", label: "TallyConnects API" },
+  { href: "/partner", label: "Partner" },
+  { href: "/blog", label: "Blogs" },
 ];
 
 export default function Navbar() {
