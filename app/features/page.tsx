@@ -10,6 +10,21 @@ export const metadata: Metadata = {
 
 const features = [
   {
+    id: "all-in-one-template",
+    title: "All-in-One Template",
+    subtitle: "One Template, 20+ Formats — Just Select and Go",
+    image: "/images/features/all-in-one-template.png",
+    bullets: [
+      "Only one Excel template needed — automatically switches between 20+ template types from a dropdown",
+      "Voucher Templates: Sales, Purchase, Credit Note, Debit Note — with and without inventory",
+      "Transaction Templates: Receipt, Payment, Journal, and Contra vouchers",
+      "Bank Statement Templates: Pre-formatted for all major Indian banks",
+      "E-Commerce Templates: Amazon, Flipkart, Meesho, and more marketplace formats",
+      "Custom Templates with Multi Debit/Credit voucher import mode — supports inventory items",
+      "Masters Templates: Bulk create Ledgers, Stock Items, Cost Centers, and more",
+    ],
+  },
+  {
     id: "automapping",
     title: "Auto-Mapping",
     subtitle: "Intelligent Column Matching for Effortless Import",
@@ -36,14 +51,18 @@ const features = [
   {
     id: "ai-validation",
     title: "AI Validation",
-    subtitle: "Error-Free Import with Intelligent Data Checks",
+    subtitle: "Real-Time Data Validation with Tally for Error-Free Import",
     image: "/images/features/ai-validation.png",
     bullets: [
-      "Validates your complete Excel data before import to ensure error-free posting",
-      "Checks dates against Tally's financial year date range automatically",
-      "Validates GSTIN format, HSN/SAC codes, and GST registration types",
+      "GSTIN Validation — Pattern check (15-char format), auto-uppercase, highlights invalid entries",
+      "State & Place of Supply — Normalizes state names, derives from GSTIN, auto-fills for Sales/Credit Notes",
+      "Date Correction — Parses multiple formats, converts to Tally format, validates against financial year range",
+      "Amount Rounding — Rounds to 2 decimal places for clean import",
+      "GST Rate Validation — Validates against known rates (0, 0.25, 3, 5, 12, 18, 28%)",
+      "HSN Code Validation — Checks length (4/6/8 digits) and numeric format",
+      "GST Registration Type — Normalizes to valid Tally values (Regular, Unregistered, Composition, etc.)",
+      "Country & Voucher Type Correction — Normalizes country names and fuzzy-matches voucher types",
       "Color-coded results: Blue = auto-corrected, Orange = warnings, Red = errors requiring attention",
-      "Shows summary of corrections, warnings, and errors for quick review",
     ],
   },
   {
@@ -72,6 +91,20 @@ const features = [
       "If details are missing in Tally, fetch them directly from the GST Portal using GSTIN number",
       "Auto-fills State, PinCode, Country, GST Registration Type, and more",
       "Ensures complete and accurate party master data for every voucher",
+    ],
+  },
+  {
+    id: "auto-create-gst",
+    title: "Auto Create GST Ledgers",
+    subtitle: "One-Click GST Ledger Setup Based on Company & Party State",
+    image: "/images/features/auto-create-gst-ledger.png",
+    bullets: [
+      "Automatically detects your company state and matches it with party place of supply",
+      "Creates the correct tax ledgers (CGST, SGST, or IGST) with proper naming and rates",
+      "Configurable ledger string format — customize naming like \"CGST @%\", \"SGST @%\"",
+      "Supports GST calculations before or after discount",
+      "Option to create other ledgers (Sales, Purchase, etc.) alongside tax ledgers",
+      "Eliminates manual GST ledger creation — no more spelling mistakes or missing rates",
     ],
   },
   {
