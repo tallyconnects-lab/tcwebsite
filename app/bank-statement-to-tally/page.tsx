@@ -42,10 +42,10 @@ const banks = [
 ];
 
 const steps = [
-  { title: "Upload Statement", desc: "Upload your bank statement PDF or paste Excel data" },
-  { title: "AI Extracts Data", desc: "TallyConnects auto-detects bank format and extracts transactions" },
-  { title: "Narration Matching", desc: "AI matches narrations to ledgers in Tally automatically" },
-  { title: "Review & Post", desc: "Verify mapped data in Excel and post to Tally in one click" },
+  { title: "Select & Upload PDF", desc: "Upload your bank statement PDF — our tool reads and displays the pages with table detection. Select the bank template or auto-detect the format.", image: "/images/features/pdf-selection.png" },
+  { title: "Convert & Import to Excel", desc: "Converted PDF data loads into the Bank Statement template. Party ledger suggestions are auto-matched from Tally. Voucher types (Receipt/Payment) are assigned based on amounts.", image: "/images/features/bank-pdf-import.png" },
+  { title: "Match Ledgers", desc: "AI matches narrations to ledgers in Tally automatically. Use smart Find & Replace for unmatched entries." },
+  { title: "Review & Post to Tally", desc: "Verify mapped data in Excel and post to Tally in one click with batch processing." },
 ];
 
 export default function BankStatementPage() {
@@ -83,16 +83,41 @@ export default function BankStatementPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {steps.map((s, i) => (
-              <div key={i} className="text-center">
-                <div className="w-12 h-12 bg-primary text-white font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">
-                  {i + 1}
+          <div className="space-y-16">
+            {steps.map((s, i) => {
+              const imageLeft = i % 2 === 0;
+              return (
+                <div
+                  key={i}
+                  className={`flex flex-col ${imageLeft ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-10`}
+                >
+                  {/* Image or Step Number */}
+                  {"image" in s && s.image ? (
+                    <div className="w-full md:w-1/2">
+                      <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <Image src={s.image} alt={s.title} width={700} height={450} className="w-full h-auto" />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-full md:w-1/2 flex justify-center">
+                      <div className="w-24 h-24 bg-primary text-white font-bold text-4xl rounded-full flex items-center justify-center shadow-lg">
+                        {i + 1}
+                      </div>
+                    </div>
+                  )}
+                  {/* Content */}
+                  <div className="w-full md:w-1/2">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-primary text-white font-bold text-lg rounded-full flex items-center justify-center shrink-0">
+                        {i + 1}
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">{s.title}</h3>
+                    </div>
+                    <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-600 text-sm">{s.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

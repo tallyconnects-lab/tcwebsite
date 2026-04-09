@@ -124,6 +124,7 @@ const features = [
     title: "Bank Statement Import",
     subtitle: "PDF to Excel Conversion with Smart Ledger Matching",
     image: "/images/features/bank-pdf-import.png",
+    link: "/bank-statement-to-tally",
     bullets: [
       "Convert PDF bank statements to structured Excel data with one click",
       "Auto-suggests party ledger names by matching narration text with Tally ledgers",
@@ -186,6 +187,14 @@ export default function FeaturesPage() {
                   <p className="text-primary font-medium text-lg mb-6">
                     {feature.subtitle}
                   </p>
+                  {"link" in feature && feature.link && (
+                    <Link
+                      href={feature.link}
+                      className="inline-block mb-4 text-sm font-semibold text-white bg-primary px-5 py-2 rounded-lg hover:opacity-90 transition"
+                    >
+                      Learn More →
+                    </Link>
+                  )}
                   <ul className="space-y-3">
                     {feature.bullets.map((b, j) => (
                       <li key={j} className="flex items-start gap-3 text-gray-700">
