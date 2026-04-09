@@ -43,9 +43,7 @@ const banks = [
 
 const steps = [
   { title: "Select & Upload PDF", desc: "Upload your bank statement PDF — our tool reads and displays the pages with table detection. Select the bank template or auto-detect the format.", image: "/images/features/pdf-selection.png" },
-  { title: "Convert & Import to Excel", desc: "Converted PDF data loads into the Bank Statement template. Party ledger suggestions are auto-matched from Tally. Voucher types (Receipt/Payment) are assigned based on amounts.", image: "/images/features/bank-pdf-import.png" },
-  { title: "Match Ledgers", desc: "AI matches narrations to ledgers in Tally automatically. Use smart Find & Replace for unmatched entries." },
-  { title: "Review & Post to Tally", desc: "Verify mapped data in Excel and post to Tally in one click with batch processing." },
+  { title: "Convert & Import to Tally", desc: "Converted PDF data loads into the Bank Statement template. Party ledger suggestions are auto-matched from Tally, voucher types (Receipt/Payment) are assigned based on amounts, and AI matches narrations to ledgers automatically. Review your data in Excel and post to Tally in one click with batch processing.", image: "/images/features/bank-pdf-import.png" },
 ];
 
 export default function BankStatementPage() {
