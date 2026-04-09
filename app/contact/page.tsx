@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -53,9 +52,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
-              <ContactForm />
+            <div className="bg-gray-50 rounded-xl p-4 md:p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Send a Message</h2>
+              <iframe
+                src="https://tallyconnects.in/forms/wtl/f44e985d3e13a3240beaea62dac909dd?styled=1"
+                className="w-full min-h-[600px] border-0 rounded-lg bg-white"
+                title="Contact Form"
+              />
             </div>
           </div>
         </div>
