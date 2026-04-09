@@ -1,136 +1,102 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Features",
-  description: "Explore TallyConnects features: Excel to Tally import, AI validation, bank statement processing, GST e-invoicing, multi-voucher mode, and more.",
+  description:
+    "Explore TallyConnects features: Auto-mapping, smart ledger matching, AI validation, Excel to Tally import, fetch party details, custom columns, and bank statement import.",
 };
 
 const features = [
   {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-    ),
-    title: "Excel to Tally Voucher Posting",
+    id: "automapping",
+    title: "Auto-Mapping",
+    subtitle: "Intelligent Column Matching for Effortless Import",
+    image: "/images/features/automapping.png",
     bullets: [
-      "Import Sales, Purchase, Credit Notes, and Debit Notes",
-      "Support for with and without inventory vouchers",
-      "Batch posting of 10,000+ rows in a single go",
-      "Receipts, Payments, Journals, and Contra vouchers",
-      "Auto-mapping of Excel columns to Tally fields",
-      "Real-time progress tracking during import",
+      "Automatically matches your data file headings with template headings — no manual mapping needed",
+      "Validates formatting of amount and date columns in real-time as you map",
+      "Change mapping on the fly and choose to import only specific columns",
+      "Dramatically reduces manual work and eliminates mapping errors",
     ],
   },
   {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
-    ),
+    id: "match-ledger",
+    title: "Match Party Ledger, Items & Other Ledgers",
+    subtitle: "Smart Find & Replace with Tally Data Validation",
+    image: "/images/features/match-ledger.png",
+    bullets: [
+      "Matches your Excel data with Tally data to validate before import — catch mismatches early",
+      "Smart Find & Replace lets you correct unmatched entries in bulk with one click",
+      "Auto-suggests closest Tally matches for unmatched data to speed up corrections",
+      "Works for Party Ledgers, Stock Items, Tax Ledgers, and all other ledger types",
+    ],
+  },
+  {
+    id: "ai-validation",
+    title: "AI Validation",
+    subtitle: "Error-Free Import with Intelligent Data Checks",
+    image: "/images/features/ai-validation.png",
+    bullets: [
+      "Validates your complete Excel data before import to ensure error-free posting",
+      "Checks dates against Tally's financial year date range automatically",
+      "Validates GSTIN format, HSN/SAC codes, and GST registration types",
+      "Color-coded results: Blue = auto-corrected, Orange = warnings, Red = errors requiring attention",
+      "Shows summary of corrections, warnings, and errors for quick review",
+    ],
+  },
+  {
+    id: "excel-to-tally",
+    title: "Excel to Tally Import",
+    subtitle: "Direct Import with Smart Batch Processing",
+    image: "/images/features/excel-to-tally-import.png",
+    bullets: [
+      "Imports data directly from Excel to Tally — no third-party software or XML import/export needed",
+      "Validates data and auto-creates missing ledgers and items with proper details before import",
+      "Batch processing for faster imports, optimized to your Tally software's response time",
+      "Add round-off ledgers in real-time during import",
+      "Multi-currency import support for international transactions",
+      "Switch voucher mode on the fly during import",
+      "One-click Undo — reverse imported records instantly if something looks wrong",
+      "Smart Import Dashboard shows real-time progress, success count, and error log",
+    ],
+  },
+  {
+    id: "fetch-party",
+    title: "Fetch Party Details",
+    subtitle: "Auto-Fill Party Information from Tally & GST Portal",
+    image: "/images/features/fetch-party-details.png",
+    bullets: [
+      "Fetches party details from Tally to ensure voucher imports have matching information",
+      "If details are missing in Tally, fetch them directly from the GST Portal using GSTIN number",
+      "Auto-fills State, PinCode, Country, GST Registration Type, and more",
+      "Ensures complete and accurate party master data for every voucher",
+    ],
+  },
+  {
+    id: "custom-columns",
+    title: "Custom Columns",
+    subtitle: "Unlimited Bill References & Cost Centers Per Ledger",
+    image: "/images/features/custom-columns.png",
+    bullets: [
+      "Add as many Bill Reference and Cost Center columns as needed for any ledger — in real-time",
+      "Select the ledger type and detail type (Bill Reference, Cost Center, etc.)",
+      "Columns are added automatically to the Excel template as you specify",
+      "The biggest advantage of Excel templates — complete flexibility without any fixed column limits",
+    ],
+  },
+  {
+    id: "bank-statement",
     title: "Bank Statement Import",
+    subtitle: "PDF to Excel Conversion with Smart Ledger Matching",
+    image: "/images/features/bank-pdf-import.png",
     bullets: [
-      "Support for all major Indian banks (HDFC, SBI, ICICI, Axis, Kotak, and more)",
-      "Auto-detect bank statement format from PDF or Excel",
-      "Narration-based ledger matching using AI",
-      "Automatic bank reconciliation with Tally",
-      "Smart voucher type detection (Receipt, Payment, Contra)",
-      "Handles multi-format date and amount columns",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-    ),
-    title: "Master Data Import",
-    bullets: [
-      "Bulk Ledger Master creation from Excel",
-      "Bulk Item Master (Stock Item) creation",
-      "Set opening balances, groups, and GST details",
-      "Import cost centres, godowns, and units",
-      "Validate master data before posting",
-      "Skip duplicates automatically",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    ),
-    title: "Smart Matching & Validation",
-    bullets: [
-      "3-level matching: exact, synonym, and fuzzy",
-      "Color-coded match confidence indicators",
-      "AI-powered validation before posting to Tally",
-      "Detects mismatches in amounts, GST rates, and party names",
-      "Highlights errors and warnings in Excel itself",
-      "One-click fix suggestions for common issues",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z" /></svg>
-    ),
-    title: "GST Compliance",
-    bullets: [
-      "GSTIN lookup and validation from government portal",
-      "Auto-create GST ledgers (CGST, SGST, IGST, Cess)",
-      "Smart IGST vs CGST/SGST calculation based on state codes",
-      "HSN/SAC code validation",
-      "GST-ready voucher formatting for Tally",
-      "Support for reverse charge and composition scheme",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-    ),
-    title: "E-Invoice IRN Generation",
-    bullets: [
-      "Generate IRN for bulk invoices directly from Excel",
-      "Cancel e-invoices with reason codes",
-      "Schema validation before submission to IRP",
-      "Auto-fill supplier and buyer details from GSTIN",
-      "Download signed JSON and QR code",
-      "Support for B2B, B2C, SEZ, and export invoices",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
-    ),
-    title: "Multi DR/CR Vouchers",
-    bullets: [
-      "Create vouchers with up to 30 ledger lines",
-      "Support for complex journal entries",
-      "Multi-debit and multi-credit in a single voucher",
-      "Ideal for salary posting, expense allocation, and fund transfers",
-      "Automatic balancing validation",
-      "Preview before posting to Tally",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-    ),
-    title: "E-Commerce Integration",
-    bullets: [
-      "Import orders from Amazon, Flipkart, Meesho, and Myntra",
-      "Auto-map marketplace data to Tally voucher format",
-      "Handle TCS, TDS, and marketplace commissions",
-      "Reconcile settlement reports with Tally entries",
-      "Support for returns, refunds, and adjustments",
-      "Bulk import thousands of e-commerce transactions",
-    ],
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-    ),
-    title: "PDF to Tally",
-    bullets: [
-      "Upload any PDF invoice or bank statement",
-      "AI extracts structured data from unstructured PDFs",
-      "Supports scanned and digital PDFs",
-      "Auto-detect invoice fields (party, amount, GST, items)",
-      "Review extracted data in Excel before posting",
-      "Token cost: Rs 0.25 per record",
+      "Convert PDF bank statements to structured Excel data with one click",
+      "Auto-suggests party ledger names by matching narration text with Tally ledgers",
+      "Automatically assigns voucher type (Receipt/Payment) based on debit/credit amounts",
+      "Supports all major Indian banks — select from saved PDF conversions",
+      "Review and edit converted data before importing to Tally",
     ],
   },
 ];
@@ -138,44 +104,93 @@ const features = [
 export default function FeaturesPage() {
   return (
     <main>
+      {/* Hero */}
       <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">All Features</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Powerful Features
+          </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Everything you need to automate your Tally data entry, right from Excel.
+            Everything you need to automate your Tally data entry — from smart
+            mapping to AI validation to one-click import.
           </p>
         </div>
       </section>
 
-      {features.map((feature, i) => (
-        <section
-          key={i}
-          className={i % 2 === 0 ? "bg-white py-16" : "bg-gray-50 py-16"}
-        >
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-start gap-4 mb-6">
-              {feature.icon}
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                {feature.title}
-              </h2>
-            </div>
-            <ul className="grid md:grid-cols-2 gap-3 ml-14">
-              {feature.bullets.map((b, j) => (
-                <li key={j} className="flex items-start gap-2 text-gray-700">
-                  <svg className="w-5 h-5 text-primary mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  {b}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ))}
+      {/* Feature Sections */}
+      {features.map((feature, i) => {
+        const imageLeft = i % 2 === 0;
+        return (
+          <section
+            key={feature.id}
+            id={feature.id}
+            className={`py-16 md:py-20 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+          >
+            <div className="max-w-7xl mx-auto px-4">
+              <div
+                className={`flex flex-col ${
+                  imageLeft ? "md:flex-row" : "md:flex-row-reverse"
+                } items-center gap-10 md:gap-16`}
+              >
+                {/* Image */}
+                <div className="w-full md:w-1/2">
+                  <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      width={700}
+                      height={450}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
 
+                {/* Content */}
+                <div className="w-full md:w-1/2">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                    {feature.title}
+                  </h2>
+                  <p className="text-primary font-medium text-lg mb-6">
+                    {feature.subtitle}
+                  </p>
+                  <ul className="space-y-3">
+                    {feature.bullets.map((b, j) => (
+                      <li key={j} className="flex items-start gap-3 text-gray-700">
+                        <svg
+                          className="w-5 h-5 text-primary mt-0.5 shrink-0"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* CTA */}
       <section className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Tally?</h2>
-          <p className="text-lg text-white/80 mb-8">Download TallyConnects and start importing data in minutes.</p>
-          <Link href="/download" className="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Automate Your Tally?
+          </h2>
+          <p className="text-lg text-white/80 mb-8">
+            Download TallyConnects and start importing data in minutes.
+          </p>
+          <Link
+            href="/download"
+            className="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition"
+          >
             Download Now
           </Link>
         </div>
