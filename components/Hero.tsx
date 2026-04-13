@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import RotatingFeatures from "./RotatingFeatures";
 
 export default function Hero() {
   return (
@@ -22,10 +23,11 @@ export default function Hero() {
 
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-dark leading-tight">
-          Excel-Based Tally Import
-          <br />
-          <span className="text-primary">with AI Validation</span>
+          Excel to Tally Prime <span className="text-primary">Import Software</span>
         </h1>
+
+        {/* Rotating Features */}
+        <RotatingFeatures />
 
         {/* Subheading */}
         <p className="mt-5 max-w-3xl mx-auto text-lg sm:text-xl text-gray-600 leading-relaxed">
