@@ -108,7 +108,7 @@ export default function PartnerPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Earning Today</h2>
           <p className="text-lg text-white/80 mb-8">Join the TallyConnects Partner Program and earn commissions on every referral.</p>
-          <a href="#" className="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+          <a href="https://tallyconnects.in/tcpartner/register" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition">
             Become a Partner
           </a>
         </div>
