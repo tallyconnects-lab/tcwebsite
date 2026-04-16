@@ -54,9 +54,9 @@ export default function Navbar() {
               href="https://demo.exceltotallyprime.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-1.5 rounded-lg text-base font-semibold transition-colors"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-5 py-2 rounded-lg text-base font-semibold shadow-lg shadow-orange-500/30 hover:scale-105 transition-transform animate-pulse"
             >
-              Product Demo
+              🎬 Product Demo
             </a>
             <Link
               href="/download"
@@ -99,9 +99,9 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="block border-2 border-primary text-primary text-center px-5 py-2 rounded-lg font-medium"
+            className="block bg-gradient-to-r from-orange-500 to-pink-500 text-white text-center px-5 py-2.5 rounded-lg font-medium shadow-lg shadow-orange-500/30"
           >
-            Product Demo
+            🎬 Product Demo
           </a>
           <Link
             href="/download"
