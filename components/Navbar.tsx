@@ -50,6 +50,14 @@ export default function Navbar() {
             >
               Contact
             </Link>
+            <a
+              href="https://demo.exceltotallyprime.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-1.5 rounded-lg text-base font-semibold transition-colors"
+            >
+              Product Demo
+            </a>
             <Link
               href="/download"
               className="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-base font-semibold transition-colors"
@@ -86,6 +94,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://demo.exceltotallyprime.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block border-2 border-primary text-primary text-center px-5 py-2 rounded-lg font-medium"
+          >
+            Product Demo
+          </a>
           <Link
             href="/download"
             onClick={() => setOpen(false)}
